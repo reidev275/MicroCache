@@ -30,7 +30,7 @@ namespace MicroCache
         /// <summary>
         /// Instantiates a new Cache object with a 1 minute duration and 100 maximum records
         /// </summary>
-        public Cache() : this(new TimeSpan(0, 1, 0), 100) { }
+        public Cache() : this(TimeSpan.FromMinutes(1), 100) { }
 
         public virtual T GetValue<TArg>(TKey key, Func<TArg, T> method, TArg argument)
         {
